@@ -7,13 +7,11 @@ echo 'installing git'
 sudo apt install git -y
 
 echo "What name do you want to use in GIT user.name?"
-echo "For example, mine will be \"Erick Wendel\""
 read git_config_user_name
 git config --global user.name "$git_config_user_name"
 clear 
 
 echo "What email do you want to use in GIT user.email?"
-echo "For example, mine will be \"erick.workspace@gmail.com\""
 read git_config_user_email
 git config --global user.email $git_config_user_email
 clear
@@ -105,14 +103,14 @@ sudo apt install fonts-firacode -y
 wget -O ~/.oh-my-zsh/themes/node.zsh-theme https://raw.githubusercontent.com/skuridin/oh-my-zsh-node-theme/master/node.zsh-theme 
 sed -i 's/.*ZSH_THEME=.*/ZSH_THEME="node"/g' ~/.zshrc
 
-echo 'installing meet franz' 
-wget https://github.com/meetfranz/franz/releases/download/v5.1.0/franz_5.1.0_amd64.deb -O franz.deb
-sudo dpkg -i franz.debchristian-kohler.path-intellisense
-sudo apt-get install -y -f 
+# echo 'installing meet franz' 
+# wget https://github.com/meetfranz/franz/releases/download/v5.1.0/franz_5.1.0_amd64.deb -O franz.deb
+# sudo dpkg -i franz.debchristian-kohler.path-intellisense
+# sudo apt-get install -y -f 
 
-echo 'installing slack' 
-wget https://downloads.slack-edge.com/linux_releases/slack-desktop-3.3.8-amd64.deb
-sudo apt install ./slack-desktop-*.deb -y
+# echo 'installing slack' 
+# wget https://downloads.slack-edge.com/linux_releases/slack-desktop-3.3.8-amd64.deb
+# sudo apt install ./slack-desktop-*.deb -y
 
 echo 'installing terminator'
 sudo apt-get update
@@ -179,16 +177,16 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 
-echo 'installing aws-cli' 
-sudo apt-get install awscli -y
-aws --version
-curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
-sudo dpkg -i session-manager-plugin.deb
-session-manager-plugin --version
+# echo 'installing aws-cli' 
+# sudo apt-get install awscli -y
+# aws --version
+# curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
+# sudo dpkg -i session-manager-plugin.deb
+# session-manager-plugin --version
 
-echo 'installing teamviewer'
-wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
-sudo apt install -y ./teamviewer_amd64.deb
+# echo 'installing teamviewer'
+# wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+# sudo apt install -y ./teamviewer_amd64.deb
 
 echo 'installing vnc-viewer'
 sudo apt-get install -y --no-install-recommends ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
